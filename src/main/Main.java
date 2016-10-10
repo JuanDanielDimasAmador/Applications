@@ -13,6 +13,8 @@ public class Main {
     
     public static void main (String[] jdda){
         System.out.print("Que pedo, si ven esto es porque ya se actualizó");
+        System.out.print("Que pedo, si ven esto es porque ya se actualizó");
+        System.out.print("Que pedo, si ven esto es porque ya se actualizó");
     }
     
 }
