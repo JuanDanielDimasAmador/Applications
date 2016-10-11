@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import models.ModelAreas;
 import views.ViewAreas;
-import jdda.Validation;
+//import jdda.Validation;
 /**
  *
  * @author Migue
@@ -16,7 +16,7 @@ import jdda.Validation;
 public class ControllerAreas implements ActionListener{
     private ViewAreas view;
     private ModelAreas model; 
-    Validation VL = new Validation();
+    //Validation VL = new Validation();
     
     public ControllerAreas(ModelAreas model, ViewAreas view) {
         this.model = model;
@@ -48,22 +48,22 @@ public class ControllerAreas implements ActionListener{
     }
 
     public void Square() {
-        model.setLado(Double.parseDouble(view.jtf_lado.getText())); 
-        double area= this.model.getLado()* this.model.getLado();
+        model.setSide(Double.parseDouble(view.jtf_lado.getText())); 
+        double area= this.model.getSide()* this.model.getSide();
         this.view.jtf_area.setText("" + area);
     }
 
     public void Rectangle() {
         model.setBase(Double.parseDouble(view.jtf_base.getText()));
-        model.setAltura(Double.parseDouble(view.jtf_Altura.getText()));
-        double Area = this.model.getBase() * this.model.getAltura();
+        model.setHeight(Double.parseDouble(view.jtf_Altura.getText()));
+        double Area = this.model.getBase() * this.model.getHeight();
         this.view.jtf_area.setText("" + Area);
     }
 
     public void Triangle() {
         model.setBase(Double.parseDouble(view.jtf_base.getText()));
-        model.setAltura(Double.parseDouble(view.jtf_Altura.getText()));
-        double Area = this.model.getBase() * this.model.getAltura()/2;
+        model.setHeight(Double.parseDouble(view.jtf_Altura.getText()));
+        double Area = this.model.getBase() * this.model.getHeight()/2;
         this.view.jtf_area.setText("" + Area);
     }
 

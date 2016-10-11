@@ -10,8 +10,7 @@ import jdda.Validation;
  * @author Danni
  */
 public class ModelVolume {
-    
-    Validation val = new Validation();
+   Validation val = new Validation();
     
     private float h;
     private float r;

@@ -13,8 +13,8 @@ public class ModelAreas {
     ViewAreas Area = new ViewAreas();
     
     private double base = 0;
-    private double altura = 0;
-    private double lado = 0;
+    private double height = 0;
+    private double side = 0;
 
     /**
      * @return the base
@@ -31,34 +31,31 @@ public class ModelAreas {
     }
 
     /**
-     * @return the altura
+     * @return the height
      */
-    public double getAltura() {
-        return altura;
+    public double getHeight() {
+        return height;
     }
 
     /**
-     * @param altura the altura to set
+     * @param height the height to set
      */
-    public void setAltura(double altura) {
-        this.altura = altura;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     /**
-     * @return the lado
+     * @return the side
      */
-    public double getLado() {
-        return lado;
+    public double getSide() {
+        return side;
     }
 
     /**
-     * @param lado the lado to set
+     * @param side the side to set
      */
-    public void setLado(double lado) {
-        this.lado = lado;
+    public void setSide(double side) {
+        this.side = side;
     }
 
-    /**
-     * @return the base
-     */
 }
