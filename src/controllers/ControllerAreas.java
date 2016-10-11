@@ -7,24 +7,23 @@ package controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import models.ModelAreas;
-import models.ModelPerimeters;
 import views.ViewAreas;
-import views.ViewPerimeters;
+import jdda.Validation;
 /**
  *
  * @author Migue
  */
-public class ControllerAreas {
+public class ControllerAreas implements ActionListener{
     private ViewAreas view;
     private ModelAreas model; 
-    private int getLado;
+    Validation VL = new Validation();
     
     public ControllerAreas(ModelAreas model, ViewAreas view) {
         this.model = model;
         this.view = view;
 
-        this.view.jBtn_Calculate.addActionListener((ActionListener) this);
-        this.view.jRB_Square.addActionListener((ActionListener) this);
+        this.view.jBtn_Calculate.addActionListener(this);
+        this.view.jRB_Square.addActionListener(this);
          
     }
 
@@ -50,33 +49,23 @@ public class ControllerAreas {
 
     public void Square() {
         model.setLado(Double.parseDouble(view.jtf_lado.getText())); 
-        double area= this.model.getLado() * getLado();
+        double area= this.model.getLado()* this.model.getLado();
         this.view.jtf_area.setText("" + area);
     }
 
     public void Rectangle() {
         model.setBase(Double.parseDouble(view.jtf_base.getText()));
         model.setAltura(Double.parseDouble(view.jtf_Altura.getText()));
-        double Area = this.model.getBase() * getAltura();
+        double Area = this.model.getBase() * this.model.getAltura();
         this.view.jtf_area.setText("" + Area);
     }
 
     public void Triangle() {
         model.setBase(Double.parseDouble(view.jtf_base.getText()));
         model.setAltura(Double.parseDouble(view.jtf_Altura.getText()));
-        double Area = this.model.getBase() * getAltura() /2;
+        double Area = this.model.getBase() * this.model.getAltura()/2;
         this.view.jtf_area.setText("" + Area);
-    }
-
-    private double getLado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private double getAltura() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
 }
-
-

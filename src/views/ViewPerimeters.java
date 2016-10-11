@@ -28,6 +28,7 @@ public class ViewPerimeters extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel3 = new javax.swing.JLabel();
         jTF_Side = new javax.swing.JTextField();
         jBtn_Calculate = new javax.swing.JButton();
@@ -49,10 +50,13 @@ public class ViewPerimeters extends javax.swing.JPanel {
 
         jLabel2.setText("Selecciona la figura de la cual deseas saber su perimetro.");
 
+        buttonGroup1.add(jRB_Square);
         jRB_Square.setText("Cuadrado");
 
+        buttonGroup1.add(jRB_Rectangle);
         jRB_Rectangle.setText("Rectangulo");
 
+        buttonGroup1.add(jRB_Triangle);
         jRB_Triangle.setText("Triangulo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -110,6 +114,7 @@ public class ViewPerimeters extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     public javax.swing.JButton jBtn_Calculate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

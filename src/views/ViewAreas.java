@@ -27,6 +27,7 @@ public class ViewAreas extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jl_base = new javax.swing.JLabel();
         jl_altura = new javax.swing.JLabel();
         jtf_base = new javax.swing.JTextField();
@@ -46,10 +47,13 @@ public class ViewAreas extends javax.swing.JPanel {
 
         jl_lado.setText("Lado");
 
+        buttonGroup1.add(jRB_Square);
         jRB_Square.setText("Cuadrado");
 
+        buttonGroup1.add(jRB_Rectangle);
         jRB_Rectangle.setText("Rectangulo");
 
+        buttonGroup1.add(jRB_Triangle);
         jRB_Triangle.setText("Triangulo");
 
         jBtn_Calculate.setText("Calcular");
@@ -128,6 +132,7 @@ public class ViewAreas extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     public javax.swing.JButton jBtn_Calculate;
     public javax.swing.JRadioButton jRB_Rectangle;
     public javax.swing.JRadioButton jRB_Square;
